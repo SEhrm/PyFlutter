@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyflutter"
+version = "0.1.0"
+description = "Flutter analysis of the 3-DOF flat plate airfoil with Edwards' unsteady aerodynamics."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "CC-BY-NC-4.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+
+[project.scripts]
+pyflutter = "pyflutter.__main__:run"
+
+[project.urls]
+Homepage = "https://github.com/SEhrm/PyFlutter"
+Source = "https://github.com/SEhrm/PyFlutter"
+Issues = "https://github.com/SEhrm/PyFlutter/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
