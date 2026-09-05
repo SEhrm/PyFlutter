@@ -1,0 +1,25 @@
+line-length = 100
+indent-width = 4
+required-version = "==0.15.0"
+
+[lint]
+select = ["ALL"]
+ignore = [
+    "RUF002", # ambiguous-unicode-character-docstring
+    "T", # flake8-print
+]
+preview = true
+
+[lint.flake8-copyright]
+author = "Simon Ehrmanntraut"
+notice-rgx = "(?i)Copyright \\(c\\) \\d{4}"
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.pylint]
+max-args = 20
+max-locals = 30
+
+[lint.isort]
+force-single-line = true
